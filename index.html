@@ -56,6 +56,102 @@
            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
        }
    </style>
+   <style>  
+
+    .slider-container {
+      width: 90%;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      background: linear-gradient(to right, #4ca1af, #2c3e50);
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .card {
+      flex: 0 0 100%;
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .card-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .before, .after {
+      text-align: center;
+      width: 150px; /* smaller size */
+    }
+
+    .before img, .after img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .before span, .after span {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 5px 12px;
+      background: #fff;
+      color: #333;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .arrow {
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .result {
+      margin-top: 15px;
+      background: #fff;
+      color: #333;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Navigation dots */
+    .dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 5px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .dot.active {
+      background: #333;
+    }
+  </style>
+
 </head>
 <body class="bg-gray-50">
    <!-- Header/Navigation -->
@@ -223,7 +319,7 @@
                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
                        <i class="fas fa-venus text-purple-600 text-xl"></i>
                    </div>
-                   <h3 class="text-xl font-semibold text-gray-800 mb-3">PCOD Diet Health</h3>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Pcod/Pcos Diet Health</h3>
                    <p class="text-gray-600 mb-4">
                        Specialized nutrition plans to manage PCOD symptoms and restore hormonal balance.
                    </p>
@@ -237,7 +333,7 @@
                    <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-4">
                        <i class="fas fa-baby text-pink-600 text-xl"></i>
                    </div>
-                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Pregnancy Diet Health</h3>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Pre/Post Pregnancy</h3>
                    <p class="text-gray-600 mb-4">
                        Optimal nutrition for mother and baby during pregnancy and postpartum.
                    </p>
@@ -273,6 +369,77 @@
                        Learn more <i class="fas fa-arrow-right ml-2"></i>
                    </a>
                </div>
+
+                 <!-- Service Card 7 -->
+               <div class="bg-white rounded-lg shadow-md p-6 service-card">
+                   <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                      <i class="fas fa-apple-alt text-blue-600 text-xl"></i> 
+                   </div>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Weight Gain</h3>
+                   <p class="text-gray-600 mb-4">
+                       For healthy weight gain, focus on calorie-dense, nutritious foods like nuts, dairy, lean proteins, and whole grains.
+                   </p>
+                   <a href="#appointment" class="text-indigo-600 font-medium inline-flex items-center">
+                       Learn more <i class="fas fa-arrow-right ml-2"></i>
+                   </a>
+               </div>
+
+                 <!-- Service Card 8 -->
+               <div class="bg-white rounded-lg shadow-md p-6 service-card">
+                   <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                      <i class="fas fa-dumbbell text-green-600 text-xl"></i> 
+                   </div>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Muscle Mass Increase</h3>
+                   <p class="text-gray-600 mb-4">
+                       Building muscle is not only about lifting weights; it also requires the right nutrition to fuel growth, repair, and strength.
+                   </p>
+                   <a href="#appointment" class="text-indigo-600 font-medium inline-flex items-center">
+                       Learn more <i class="fas fa-arrow-right ml-2"></i>
+                   </a>
+               </div>
+
+
+                 <!-- Service Card 9 -->
+               <div class="bg-white rounded-lg shadow-md p-6 service-card">
+                   <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                      <i class="fas fa-spa text-pink-600 text-xl"></i>
+                   </div>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Skin Care Nutrition</h3>
+                   <p class="text-gray-600 mb-4">
+                       Nutrition plans to support growth, development and establish healthy eating habits.
+                   </p>
+                   <a href="#appointment" class="text-indigo-600 font-medium inline-flex items-center">
+                       Learn more <i class="fas fa-arrow-right ml-2"></i>
+                   </a>
+               </div>
+
+                  <!-- Service Card 10 -->
+               <div class="bg-white rounded-lg shadow-md p-6 service-card">
+                   <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                      <i class="fas fa-seedling text-purple-600 text-xl"></i> 
+                   </div>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Hair Growth Nutrition</h3>
+                   <p class="text-gray-600 mb-4">
+                       Nutrition plans to support growth, development and establish healthy eating habits.
+                   </p>
+                   <a href="#appointment" class="text-indigo-600 font-medium inline-flex items-center">
+                       Learn more <i class="fas fa-arrow-right ml-2"></i>
+                   </a>
+               </div>
+
+                  <!-- Service Card 11 -->
+               <div class="bg-white rounded-lg shadow-md p-6 service-card">
+                   <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                       <i class="fas fa-sync-alt text-blue-600 text-xl"></i>
+                   </div>
+                   <h3 class="text-xl font-semibold text-gray-800 mb-3">Overall Body Transformation</h3>
+                   <p class="text-gray-600 mb-4">
+                       Nutrition plans to support growth, development and establish healthy eating habits.
+                   </p>
+                   <a href="#appointment" class="text-indigo-600 font-medium inline-flex items-center">
+                       Learn more <i class="fas fa-arrow-right ml-2"></i>
+                   </a>
+               </div>
            </div>
           
            <div class="text-center mt-12">
@@ -282,6 +449,107 @@
            </div>
        </div>
    </section>
+
+
+
+<section>
+ <div class="text-center mb-16">
+               <h2 class="text-3xl font-bold text-gray-800 mb-4">Real-Life Fitness Makeovers</h2>
+               <p class="text-gray-600 max-w-2xl mx-auto">
+                   Comprehensive nutrition and wellness services tailored to your specific health needs
+               </p>
+               <div class="w-20 h-1 bg-indigo-600 mx-auto mt-4"></div>
+           </div>
+     <div class="slider-container">
+    <div class="slider-track">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="before">
+            <img src="image/rv_b2.jpeg" alt="Before" style="width: 150px; height: 200px;">
+            <span>102 kg</span>
+          </div>
+          <div class="arrow">➡️</div>
+          <div class="after">
+            <img src="image/rv_a2.jpeg" alt="After" style="width: 150px; height: 200px;">
+            <span>82 kg</span>
+          </div>
+        </div>
+        <div class="result">Lost 20 kgs in 120 Days</div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="before">
+            <img src="image/rv_b3.jpeg" alt="Before" style="width: 150px; height: 200px;">
+            <span>83.3 kg</span>
+          </div>
+          <div class="arrow">➡️</div>
+          <div class="after">
+            <img src="image/rv_a3.jpeg" alt="After" style="width: 150px; height: 200px;">
+            <span>72.2 kg</span>
+          </div>
+        </div>
+        <div class="result">Lost 11 kgs in 60 Days</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-content">
+          <div class="before">
+            <img src="image/rv_a1.jpeg" alt="Before" style="width: 150px; height: 200px;">
+            <span>95.3 kg</span>
+          </div>
+          <div class="arrow">➡️</div>
+          <div class="after">
+            <img src="image/rv_b1.jpeg" alt="After" style="width: 150px; height: 200px;">
+            <span>80 kg</span>
+          </div>
+        </div>
+        <div class="result">Lost 15 kgs in 60 Days</div>
+      </div>
+
+      <!-- Card 4 
+      <div class="card">
+        <div class="card-content">
+          <div class="before">
+            <img src="https://picsum.photos/150/200?random=7" alt="Before">
+            <span>76 kg</span>
+          </div>
+          <div class="arrow">➡️</div>
+          <div class="after">
+            <img src="https://picsum.photos/150/200?random=8" alt="After">
+            <span>68 kg</span>
+          </div>
+        </div>
+        <div class="result">Lost 8 kgs in 60 Days</div>
+      </div>
+
+      <!-- Card 5 
+      <div class="card">
+        <div class="card-content">
+          <div class="before">
+            <img src="https://picsum.photos/150/200?random=9" alt="Before">
+            <span>95 kg</span>
+          </div>
+          <div class="arrow">➡️</div>
+          <div class="after">
+            <img src="https://picsum.photos/150/200?random=10" alt="After">
+            <span>78 kg</span>
+          </div>
+        </div>
+        <div class="result">Lost 17 kgs in 150 Days</div>
+      </div>-->
+
+    </div>
+  </div>
+
+  <div class="dots"></div>
+
+</section>
+
 
 
    <!-- Experience Section -->
@@ -508,7 +776,7 @@
                            </div>
                            <div class="ml-4">
                                <h4 class="text-lg font-medium text-gray-800">Clinic Address</h4>
-                               <p class="text-gray-600">Love Nutrition & Wellness Clinic, Bodinayakanur, Theni, Tamilnadu, India</p>
+                               <p class="text-gray-600">Tamilnadu, India</p>
                            </div>
                        </div>
                       
@@ -558,40 +826,41 @@
               
                <div class="md:w-1/2">
                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send Us a Message</h3>
-                   <form class="space-y-4">
-                       <div>
-                           <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                           <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                       </div>
-                       <div>
-                           <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                           <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                       </div>
-                       <div>
-                           <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                           <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                       </div>
-                       <div>
-                           <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
-                           <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                               <option>Select a service</option>
-                               <option>Diabetic Diet Health</option>
-                               <option>Diet And Heart Health</option>
-                               <option>PCOD Diet Health</option>
-                               <option>Pregnancy Diet Health</option>
-                               <option>Weight Loss Diet</option>
-                               <option>Healthy Diet for Kids</option>
-                               <option>Other</option>
-                           </select>
-                       </div>
-                       <div>
-                           <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
-                           <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-                       </div>
-                       <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
-                           Send Message
-                       </button>
-                   </form>
+                <form action="mail.php" method="POST" class="space-y-4">
+    <div>
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+    </div>
+    <div>
+        <label for="service">Service Interested In</label>
+        <select name="service" id="service" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <option value="">Select a service</option>
+            <option>Diabetic Diet Health</option>
+            <option>Diet And Heart Health</option>
+            <option>PCOD Diet Health</option>
+            <option>Pregnancy Diet Health</option>
+            <option>Weight Loss Diet</option>
+            <option>Healthy Diet for Kids</option>
+            <option>Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+    </div>
+    <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">
+        Send Message
+    </button>
+</form>
+
                </div>
            </div>
        </div>
@@ -732,6 +1001,41 @@
            alert('Mobile menu would open here in a full implementation');
        });
    </script>
+
+
+ <script>
+    const track = document.querySelector('.slider-track');
+    const cards = document.querySelectorAll('.card');
+    const dotsContainer = document.querySelector('.dots');
+
+    let index = 0;
+    const total = cards.length;
+
+    // Create dots
+    cards.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function goToSlide(i) {
+      index = i;
+      track.style.transform = `translateX(-${i * 100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dots[i].classList.add('active');
+    }
+
+    function autoSlide() {
+      index = (index + 1) % total;
+      goToSlide(index);
+    }
+
+    setInterval(autoSlide, 3000); // auto slide every 3 sec
+  </script>
 </body>
 </html>
 
