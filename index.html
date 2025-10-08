@@ -15,8 +15,14 @@
        }
       
        .hero-gradient {
-           background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-       }
+  background: 
+    linear-gradient(135deg, rgba(245, 247, 250, 0.8) 0%, rgba(195, 207, 226, 0.8) 100%), 
+    url("image/new-love-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
       
        .service-card:hover {
            transform: translateY(-10px);
@@ -56,102 +62,51 @@
            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
        }
    </style>
-   <style>  
+   
+  <style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    .slider-container {
-      width: 90%;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      position: relative;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      background: linear-gradient(to right, #4ca1af, #2c3e50);
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    background: #e0f0ff; /* light blue background */
+    padding: 50px 0;
+  }
+
+  .slider-track {
+    display: flex;
+    gap: 20px; /* space between images */
+    animation: slide 15s linear infinite; /* continuous animation */
+  }
+
+  .slider-track img {
+  width: calc((100% / 3) - 13.3px); /* 3 images visible with gap */
+  /* height: 400px; set your desired height */
+  flex-shrink: 0;
+  border-radius: 15px;
+  object-fit: cover; /* ensures images cover the area without distortion */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+  /* Keyframes for smooth continuous sliding */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* move half of track */
+  }
+
+  @media (max-width: 900px) {
+    .slider-track img {
+      width: calc((100% / 2) - 10px);
     }
+  }
 
-    .slider-track {
-      display: flex;
-      transition: transform 0.6s ease-in-out;
-    }
-
-    .card {
-      flex: 0 0 100%;
-      text-align: center;
-      color: #fff;
-      padding: 20px;
-      box-sizing: border-box;
-      position: relative;
-    }
-
-    .card-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .before, .after {
-      text-align: center;
-      width: 150px; /* smaller size */
-    }
-
-    .before img, .after img {
+  @media (max-width: 600px) {
+    .slider-track img {
       width: 100%;
-      max-width: 150px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
-
-    .before span, .after span {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 5px 12px;
-      background: #fff;
-      color: #333;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 13px;
-    }
-
-    .arrow {
-      font-size: 30px;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .result {
-      margin-top: 15px;
-      background: #fff;
-      color: #333;
-      display: inline-block;
-      padding: 6px 18px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 14px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-    }
-
-    /* Navigation dots */
-    .dots {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .dot {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin: 5px;
-      background: #bbb;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    .dot.active {
-      background: #333;
-    }
-  </style>
-
+  }
+</style>
 </head>
 <body class="bg-gray-50">
    <!-- Header/Navigation -->
@@ -450,103 +405,29 @@
        </div>
    </section>
 
-
-
 <section>
- <div class="text-center mb-16">
+ <div class="text-center mb-8">
                <h2 class="text-3xl font-bold text-gray-800 mb-4">Real-Life Fitness Makeovers</h2>
                <p class="text-gray-600 max-w-2xl mx-auto">
                    Comprehensive nutrition and wellness services tailored to your specific health needs
                </p>
                <div class="w-20 h-1 bg-indigo-600 mx-auto mt-4"></div>
            </div>
-     <div class="slider-container">
-    <div class="slider-track">
 
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="card-content">
-          <div class="before">
-            <img src="image/rv_b2.jpeg" alt="Before" style="width: 150px; height: 200px;">
-            <span>102 kg</span>
-          </div>
-          <div class="arrow">➡️</div>
-          <div class="after">
-            <img src="image/rv_a2.jpeg" alt="After" style="width: 150px; height: 200px;">
-            <span>82 kg</span>
-          </div>
-        </div>
-        <div class="result">Lost 20 kgs in 120 Days</div>
-      </div>
+<div class="slider-container">
+  <div class="slider-track">
+    <img src="image/image-1.jpg" alt="Image 1">
+    <img src="image/image-2.jpg" alt="Image 2">
+    <img src="image/image-3.jpg" alt="Image 3">
+    
 
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="card-content">
-          <div class="before">
-            <img src="image/rv_b3.jpeg" alt="Before" style="width: 150px; height: 200px;">
-            <span>83.3 kg</span>
-          </div>
-          <div class="arrow">➡️</div>
-          <div class="after">
-            <img src="image/rv_a3.jpeg" alt="After" style="width: 150px; height: 200px;">
-            <span>72.2 kg</span>
-          </div>
-        </div>
-        <div class="result">Lost 11 kgs in 60 Days</div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="card-content">
-          <div class="before">
-            <img src="image/rv_a1.jpeg" alt="Before" style="width: 150px; height: 200px;">
-            <span>95.3 kg</span>
-          </div>
-          <div class="arrow">➡️</div>
-          <div class="after">
-            <img src="image/rv_b1.jpeg" alt="After" style="width: 150px; height: 200px;">
-            <span>80 kg</span>
-          </div>
-        </div>
-        <div class="result">Lost 15 kgs in 60 Days</div>
-      </div>
-
-      <!-- Card 4 
-      <div class="card">
-        <div class="card-content">
-          <div class="before">
-            <img src="https://picsum.photos/150/200?random=7" alt="Before">
-            <span>76 kg</span>
-          </div>
-          <div class="arrow">➡️</div>
-          <div class="after">
-            <img src="https://picsum.photos/150/200?random=8" alt="After">
-            <span>68 kg</span>
-          </div>
-        </div>
-        <div class="result">Lost 8 kgs in 60 Days</div>
-      </div>
-
-      <!-- Card 5 
-      <div class="card">
-        <div class="card-content">
-          <div class="before">
-            <img src="https://picsum.photos/150/200?random=9" alt="Before">
-            <span>95 kg</span>
-          </div>
-          <div class="arrow">➡️</div>
-          <div class="after">
-            <img src="https://picsum.photos/150/200?random=10" alt="After">
-            <span>78 kg</span>
-          </div>
-        </div>
-        <div class="result">Lost 17 kgs in 150 Days</div>
-      </div>-->
-
-    </div>
+    <!-- Duplicate images for infinite loop -->
+    <img src="image/image-1.jpg" alt="Image 1">
+    <img src="image/image-2.jpg" alt="Image 2">
+    <img src="image/image-3.jpg" alt="Image 3">
   </div>
+</div>
 
-  <div class="dots"></div>
 
 </section>
 
@@ -740,13 +621,13 @@
                    Book your consultation today and take the first step towards a healthier, happier you
                </p>
                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                   <a href="tel:+919876543210" class="px-6 py-3 bg-white text-indigo-600 rounded-full font-medium hover:bg-gray-100 transition">
+                   <a href="tel:+916385785508" class="px-6 py-3 bg-white text-indigo-600 rounded-full font-medium hover:bg-gray-100 transition">
                        <i class="fas fa-phone-alt mr-2"></i> Call Now
                    </a>
-                   <a href="https://wa.me/919876543210" class="px-6 py-3 bg-green-500 text-white rounded-full font-medium hover:bg-green-600 transition">
+                   <a href="https://wa.me/+916385785508" class="px-6 py-3 bg-green-500 text-white rounded-full font-medium hover:bg-green-600 transition">
                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                    </a>
-                   <a href="mailto:consult@lovenutrition.com" class="px-6 py-3 bg-indigo-700 text-white rounded-full font-medium hover:bg-indigo-800 transition">
+                   <a href="mailto:lovenutritionfittness@gmail.com" class="px-6 py-3 bg-indigo-700 text-white rounded-full font-medium hover:bg-indigo-800 transition">
                        <i class="fas fa-envelope mr-2"></i> Email Us
                    </a>
                </div>
